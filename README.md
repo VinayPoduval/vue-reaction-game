@@ -1,4 +1,5 @@
-# vue-reaction-game
+# Reaction Game
+Test how quick you can react with this game
 
 ## Project setup
 ```

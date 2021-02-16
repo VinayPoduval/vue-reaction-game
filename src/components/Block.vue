@@ -24,6 +24,9 @@ export default {
         startTimer() {
             this.timer = setInterval(()=>{
                 this.reactionTime += 10
+                if(this.reactionTime > 5000) {
+                    this.stopTimer()
+                }
             }, 10)
         },
         stopTimer() {

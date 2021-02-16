@@ -1,5 +1,6 @@
 <template>
-    <h2>Reaction time: {{score}}ms</h2>
+    <h2 v-if="score<=5000">Reaction time: {{score}}ms</h2>
+    <h2 v-else>Failed! Try Again</h2>
     <p class="rank">{{rank}}</p>
 </template>
 
@@ -18,7 +19,7 @@ export default {
         else if(this.score < 400) {
             this.rank = 'You\'re quick but not rapid'
         }
-        else {
+        else if(this.score < 5000) {
             this.rank = 'Eww Snail pace'
         }
     }

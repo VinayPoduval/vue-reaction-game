@@ -16,7 +16,7 @@ export default {
     return {
       isPlaying: false,
       delay: null,
-      score: 0,
+      score: null,
       showResults: false
     }
   },
@@ -26,7 +26,7 @@ export default {
       this.isPlaying = true
       this.showResults = false
     },
-    endGame(time) {
+    endGame(time) {    
       this.score = time
       this.isPlaying = false
       this.showResults = true

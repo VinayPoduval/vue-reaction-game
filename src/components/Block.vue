@@ -45,4 +45,10 @@ export default {
         margin: 40px auto;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 768px) {
+        .block {
+            width: 60%;
+        }
+    }
 </style>

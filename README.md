@@ -1,5 +1,5 @@
 # Reaction Game
-Test how quick you can react with this game
+Test how quick you can react with this game. Check the game out [here](https://reaction-game19.netlify.app)
 
 ## Project setup
 ```

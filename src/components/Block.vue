@@ -10,6 +10,8 @@ export default {
     data() {
         return {
             showBlock: false,
+            startTime: null,
+            endTime: null,
             timer: null,
             reactionTime: 0
         }
@@ -22,16 +24,19 @@ export default {
     },
     methods: {
         startTimer() {
-            this.timer = setInterval(()=>{
-                this.reactionTime += 10
-                if(this.reactionTime > 5000) {
-                    this.stopTimer()
-                }
-            }, 10)
+            this.startTime = new Date()
+            // this.timer = setInterval(()=>{
+            //     this.reactionTime += 10
+            //     if(this.reactionTime > 5000) {
+            //         this.stopTimer()
+            //     }
+            // }, 10)
         },
         stopTimer() {
-            clearInterval(this.timer)
-            this.$emit('end', this.reactionTime)
+            this.endTime = new Date()
+            this.$emit('end', this.endTime - this.startTime)
+            // clearInterval(this.timer)
+            // this.$emit('end', this.reactionTime)
         }
     }
 }
